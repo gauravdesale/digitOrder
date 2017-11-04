@@ -1,0 +1,26 @@
+
+Digit ordering problem brainstorming
+
+question: convert the given number x and the number N convert to a different numerical system and return the first digits of the number x that is divisible by x
+
+strategy:
+	current (yet super crude) logic flow:
+	1) firstly make a list to store the digits
+	2) loop through till a break condition is raised  and store the following numbers in a list
+	3) split those numbers into lists to make a list of lists and multiply their digits by the number N raised to the power of the current digit number
+	4) then add all these numbers together to form the equivalent numbers for the original list with base n 
+	5) then use a for loop to go through the first x digits and  check if the digits are digits are divisible by x
+	6) make yet another list to contain this number and return the substring as the result
+	
+	functions to abstract stuff:
+	1) one function called convertBases to convert the given number to the base of choosing. parameters = number to convert, base to convert to 
+	2) one function called makeLists to loop through the numbers in the 10 digit numerical system and use the previous function to convert each number and store the current number in a list and then compares each digit with the number x and if the first x are divisible then it returns that substring.. parameters = the number x and number N
+	3) main function to test this fir several different test case
+	
+	language im trying this in:
+	options: go, c, haskell(too hard lol), lua, python, java, javascript
+	leaning towards go since im trying to learn syntax and power but will write website for it later and propose this as a library if its good
+
+	improvements: this is super inefficient since constant looping 
+
+	
